@@ -9,16 +9,16 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>uz.mehrob</groupId>
-    <artifactId>mehrob</artifactId>
+    <groupId>uz.project</groupId>
+    <artifactId>project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>Mehrob</name>
-    <description>Mehrob uz</description>
+    <name>GaloreGreenHouse</name>
+    <description>GaloreGreenHouse project</description>
 
     <developers>
         <developer>
-            <name>IslombekQurbonov</name>
+            <name>Islombek_Qurbonov</name>
             <email>islombekqurbonovfd@gmail.com</email>
         </developer>
     </developers>

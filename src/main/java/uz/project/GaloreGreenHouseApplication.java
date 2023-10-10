@@ -12,11 +12,11 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @SpringBootApplication
-public class GaloreyGreenHouseApplication {
-    private static final Logger log = LoggerFactory.getLogger(GaloreyGreenHouseApplication.class);
+public class GaloreGreenHouseApplication {
+    private static final Logger log = LoggerFactory.getLogger(GaloreGreenHouseApplication.class);
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(GaloreyGreenHouseApplication.class);
+        SpringApplication app = new SpringApplication(GaloreGreenHouseApplication.class);
         ConfigurableEnvironment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
     }

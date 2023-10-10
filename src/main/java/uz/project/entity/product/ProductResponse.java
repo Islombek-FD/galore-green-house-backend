@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.project.common.constant.Name;
-import uz.project.common.constant.Status;
 import uz.project.common.response.TechnicalFieldsResponse;
 import uz.project.entity.category.CategoryResponse;
 import uz.project.entity.file.FileResponse;
@@ -28,7 +27,6 @@ public class ProductResponse extends TechnicalFieldsResponse {
     private Name description;
     private List<FileResponse> photos;
     private CategoryResponse category;
-    private Status status;
 
     public ProductResponse(Product product) {
         this.id = product.getId();

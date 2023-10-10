@@ -62,17 +62,4 @@ public class CategoryResponse extends TechnicalFieldsResponse {
         categoryResponse.setProductCount(category.getProducts().size());
         return categoryResponse;
     }
-
-    public static CategoryResponse responseForPrice(Category category) {
-        CategoryResponse categoryResponse = new CategoryResponse();
-        categoryResponse.setId(category.getId());
-        categoryResponse.setName(category.getName());
-        categoryResponse.setProducts(
-                category.getProducts()
-                        .stream()
-                        .map(ProductResponse::responseToClient)
-                        .toList()
-        );
-        return categoryResponse;
-    }
 }
