@@ -19,12 +19,12 @@ import java.util.List;
 @Configuration
 @OpenAPIDefinition(
         info = @Info(
-                title = "Mehrob Services",
+                title = "GaloreGreenHouse Services",
                 version = "1.0",
                 contact = @Contact(
-                        name = "Mehrob SUPPORT", email = "islombekqurbonovfd@gmail.com"
+                        name = "GaloreGreenHouse SUPPORT", email = "islombekqurbonovfd@gmail.com"
                 ),
-                description = "Mehrob Resources"
+                description = "GaloreGreenHouse Resources"
         ),
         servers = {
                 @Server(url = "http://localhost:${server.port}", description = "Local development")
@@ -38,7 +38,6 @@ import java.util.List;
 )
 @Slf4j
 public class SwaggerConfig {
-
 
     public static final String BEARER = "Bearer Authentication";
 
