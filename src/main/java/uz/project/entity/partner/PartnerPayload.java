@@ -16,7 +16,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public class PartnerPayload {
 
-    @NotBlank
+    @NotNull
     private Name name;
     @NotBlank
     private String url;

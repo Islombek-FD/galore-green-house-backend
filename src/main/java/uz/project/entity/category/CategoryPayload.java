@@ -7,7 +7,6 @@ import lombok.Setter;
 import uz.project.common.constant.Name;
 import uz.project.common.constant.Status;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Getter
@@ -16,8 +15,9 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public class CategoryPayload {
 
-    @NotBlank
+    @NotNull
     private Name name;
+    @NotNull
     private Name description;
     @NotNull
     private Long photoId;

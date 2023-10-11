@@ -18,7 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ProductPayload {
 
-    @NotBlank
+    @NotNull
     private Name name;
     @NotNull
     private BigDecimal price;

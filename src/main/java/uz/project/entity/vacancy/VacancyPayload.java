@@ -7,7 +7,6 @@ import lombok.Setter;
 import uz.project.common.constant.Name;
 import uz.project.common.constant.Status;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
@@ -17,7 +16,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class VacancyPayload {
 
-    @NotBlank
+    @NotNull
     private Name name;
     @NotNull
     private BigDecimal salary;
