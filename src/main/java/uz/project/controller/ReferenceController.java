@@ -6,12 +6,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import uz.project.common.constant.Status;
 import uz.project.common.constant.TranslationType;
+import uz.project.entity.category.CategoryResponse;
+import uz.project.entity.category.CategoryService;
 import uz.project.entity.file.File;
 import uz.project.entity.file.FileService;
 import uz.project.entity.translation.TranslationService;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -20,10 +24,12 @@ import java.util.UUID;
 public class ReferenceController {
 
     private final FileService fileService;
+    private final CategoryService categoryService;
     private final TranslationService translationService;
 
-    public ReferenceController(FileService fileService, TranslationService translationService) {
+    public ReferenceController(FileService fileService, CategoryService categoryService, TranslationService translationService) {
         this.fileService = fileService;
+        this.categoryService = categoryService;
         this.translationService = translationService;
     }
 
@@ -40,5 +46,13 @@ public class ReferenceController {
             response.put(translation.getTag(), translation.getName().getByLang(lang));
         });
         return response;
+    }
+
+    @GetMapping("/categories")
+    public List<CategoryResponse> getCategories() {
+        return categoryService.getList(Status.ACTIVE)
+                .stream()
+                .map(CategoryResponse::minResponseToAdmin)
+                .toList();
     }
 }
