@@ -48,6 +48,8 @@ public class BannerService {
 
     @Transactional
     public Banner save(Banner banner, BannerPayload payload) {
+        banner.setTitle(payload.getTitle());
+        banner.setDescription(payload.getDescription());
         banner.setPhoto(fileService.changeType(payload.getPhotoId(), FileType.ACTIVE));
         banner.setStatus(payload.getStatus());
         return bannerRepository.saveAndFlush(banner);
