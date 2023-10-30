@@ -48,8 +48,8 @@ public class Blog extends TechnicalFields {
     @JoinColumn(name = "photo_id", referencedColumnName = "id")
     private File photo;
 
-    @Column(name = "views", columnDefinition = "integer default 0")
-    private Integer views;
+    @Column(name = "views")
+    private Integer views = 0;
 
     @Column(name = "type", columnDefinition = "varchar(20) default 'NEW'")
     @Enumerated(EnumType.STRING)
