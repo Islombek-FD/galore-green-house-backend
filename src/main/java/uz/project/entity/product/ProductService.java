@@ -55,6 +55,7 @@ public class ProductService {
         product.setPrice(payload.getPrice());
         product.setDescription(payload.getDescription());
         product.setPhotos(fileService.changeType(payload.getPhotoIds(), FileType.ACTIVE));
+        product.setCategoryId(payload.getCategoryId());
         product.setCategory(categoryService.getById(payload.getCategoryId()));
         product.setStatus(payload.getStatus());
         return productRepository.saveAndFlush(product);

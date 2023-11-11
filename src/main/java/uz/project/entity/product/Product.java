@@ -58,7 +58,17 @@ public class Product extends TechnicalFields {
     )
     private List<File> photos = new ArrayList<>();
 
+    @Column(name = "category_id", nullable = false)
+    private Long categoryId;
+
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    @JoinColumn(
+            name = "category_id",
+            insertable = false,
+            updatable = false,
+            nullable = false,
+            referencedColumnName = "id",
+            foreignKey = @ForeignKey(name = "product_category_fk")
+    )
     private Category category;
 }
